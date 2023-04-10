@@ -3,7 +3,7 @@
 
 #ifndef RECURSIVEBINARYSEARCH_H
 #define RECURSIVEBINARYSEARCH_H
-class RecursiveBinarySearch: public Sort
+class RecursiveBinarySearch
 {
     public:
         bool search(std::vector<int> list, int number);
