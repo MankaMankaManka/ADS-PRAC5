@@ -1,3 +1,6 @@
+#include <iostream>
+#include <vector>
+
 #ifndef RECURSIVEBINARYSEARCH_H
 #define RECURSIVEBINARYSEARCH_H
 class RecursiveBinarySearch
