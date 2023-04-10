@@ -12,13 +12,13 @@
             }
         }
         std::swap(nums[i+1],nums[high]);
-        return i+1;
+        return (i+1);
     }
     
     int QuickSort::setPivot(std::vector<int>&nums,int low, int high)
     {
-        if(high>2){
-            std::swap(nums[2],nums[high]);
+        if(high-low>2){
+            std::swap(nums[low+2],nums[high]);
             return partition(nums,low,high);
         }
         else{
@@ -26,14 +26,11 @@
         }
     }
 
-
-
-
     void QuickSort::doQuickSort(std::vector<int>& nums,int low, int high)
     {
         if(low<high)
         {
-            int pivot=partition(nums,low,high);
+            int pivot=setPivot(nums,low,high);
             doQuickSort(nums,low,pivot-1);
             doQuickSort(nums,pivot+1,high);
             
