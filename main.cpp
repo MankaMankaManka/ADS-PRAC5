@@ -1,20 +1,33 @@
 #include <iostream>
 #include <vector>
 #include "QuickSort.h"
-
+#include "BubbleSort.h"
+#include "RecursiveBinarySearch.h"
 
 int main(){
-QuickSort popo;
-std::vector<int> numbers= {3,2,4};
+std::vector<int> sampleOne= {1, 3, 5, 4, -5, 100, 7777, 2014};
+std::vector<int> sampleTwo= {0, 3, 5, 4, -5, 100, 7777, 2014};
+QuickSort a;
+RecursiveBinarySearch b;
 
-     for (int i = 0; i < 10; i++){
-        numbers.push_back(i);
+a.quickSort(sampleOne);
+if (b.search(sampleOne, 1)==1){
+    std::cout<<"true ";
+} else{
+    std::cout<<"false ";
 }
-std::vector<int> resullt = popo.quickSort(numbers);
-for (int i = 0; i < 10; i++){
-        resullt.push_back(i);
+for (int i=0; i<sampleOne.size();i++){
+    std::cout<<sampleOne[i]<<" ";
+    }
+    
+a.quickSort(sampleTwo);
+if (b.search(sampleTwo, 1)==1){
+    std::cout<<"true ";
+} else{
+    std::cout<<"false ";
 }
-    for (int i = 0; i < resullt.size(); i++){
-        std::cout<<resullt[i]<<"\n";
+for (int i=0; i<sampleTwo.size();i++){
+    std::cout<<sampleTwo[i]<<" ";
     }
 }
+
