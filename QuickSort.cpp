@@ -18,7 +18,7 @@
     int QuickSort::setPivot(std::vector<int>&nums,int low, int high)
     {
         if(high-low>3){
-            std::swap(nums[low+3],nums[high]);
+            std::swap(nums[low+3],nums[low]);
             return partition(nums,low,high);
         }
         else{
